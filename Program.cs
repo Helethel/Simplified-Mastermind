@@ -26,6 +26,7 @@ namespace Mastermind
             //Init
             Console.WriteLine("Hello, welcome to Simplified Mastermind!");
             Console.WriteLine("\nInstructions: "
+            + "\nI will randomize 4 digits between 1 and 6 inclusively."
             + "\nWhen you guess a number, I will print out a + for every digit you get correct in the correct spot."
             + "\nAnd I will print out a - for every digit you get correct in the wrong spot.\n");
 
@@ -130,8 +131,8 @@ namespace Mastermind
             }
 
             foreach (char myChar in input) { //Test that all chars are digits
-                if (myChar < '0' || myChar > '9') {
-                    Console.WriteLine($"\n>>>I'm sorry, please use only numbers.<<<\n");
+                if (myChar < '1' || myChar > '6') {
+                    Console.WriteLine($"\n>>>I'm sorry, please use only numbers 1 through 6.<<<\n");
                     return false;
                 }
             }
